@@ -16,7 +16,7 @@ const loadMovies = createAsyncThunk(
 async(_, thunkAPI) =>{
         try{
             const movies = await MovieService.getAllMovies('1')
-            return thunkAPI.fulfillWithValue(movies)
+            return thunkAPI.fulfillWithValue(movies?.results || [])
         }
         catch (e){
             const error =e as AxiosError
@@ -31,7 +31,9 @@ export const movieSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(loadMovies.fulfilled, (state, action) =>{
-                state.movies = action.payload
+                if(state){
+                    state.movies = action.payload
+                }
             })
 })
 
