@@ -8,15 +8,15 @@ interface IProps {
 const MovieComponent:FC<IProps> = ({movie}) => {
 
 
+    const image_movie = `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+
 
     return (
-        <div>
-            <div className={styles.BlockMovie}>
-                <a>
-                    <img alt={movie.title} src={movie.backdrop_path}/>
+        <div className={styles.BlockMovies}>
+                <a className={styles.BlockMovie}>
+                    <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
                     <h4>{movie.title}</h4>
                 </a>
-            </div>
         </div>
     );
 };

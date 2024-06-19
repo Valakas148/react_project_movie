@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useAppDispatch} from "../redux/store";
 import {movieAction} from "../redux/slices/MovieSlice";
 import MoviesComponent from "../components/MoviesComponents/MoviesComponent";
+import PaginationComponent from "../components/PaginationComponent/PaginationComponent";
 
 const MoviesPage = () => {
 
@@ -14,6 +15,7 @@ const MoviesPage = () => {
     return (
         <div>
             <MoviesComponent/>
+            <PaginationComponent/>
         </div>
     );
 };

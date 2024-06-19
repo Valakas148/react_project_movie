@@ -1,4 +1,24 @@
 
-.BlockMovie{
+.BlockMovie {
     background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 260px; /* Ширина трохи більше за фото */
+    height: 400px;
+}
+.BlockMovies{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Відстань між блоками */
+    justify-content: space-around;
+}
+.MovieImg{
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
 }
