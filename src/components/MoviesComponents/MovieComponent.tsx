@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
+import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
 
-const MovieComponent = () => {
+interface IProps {
+    movie: IMovieDiscoverModel
+}
+const MovieComponent:FC<IProps> = ({movie}) => {
+
+
+
     return (
         <div>
-            
+            <div>
+                <p>{movie.title}</p>
+            </div>
         </div>
     );
 };
