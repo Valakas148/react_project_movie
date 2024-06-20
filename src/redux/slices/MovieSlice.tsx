@@ -4,18 +4,22 @@ import {MovieService} from "../../services/movie.service";
 import {AxiosError} from "axios";
 
 type MovieSliceType ={
-    movies: IMovieDiscoverModel[]
+    movies: IMovieDiscoverModel[];
+    currentPage: number;
+    total_pages: number | null
 }
 
 const movieInitialState: MovieSliceType = {
-    movies: []
+    movies: [],
+    currentPage: 1,
+    total_pages: null
 }
 
 const loadMovies = createAsyncThunk(
 'MovieSlice/loadMovies',
-async(_, thunkAPI) =>{
+async(currentPage: number, thunkAPI) =>{
         try{
-            const movies = await MovieService.getAllMovies('1')
+            const movies = await MovieService.getAllMovies(currentPage)
             return thunkAPI.fulfillWithValue(movies?.results || [])
         }
         catch (e){
@@ -27,7 +31,11 @@ async(_, thunkAPI) =>{
 export const movieSlice = createSlice({
     name: 'MovieSlice',
     initialState: movieInitialState,
-    reducers: {},
+    reducers: {
+        SetCurrentPage: (state,action) =>{
+            state.currentPage = action.payload
+        }
+    },
     extraReducers: builder =>
         builder
             .addCase(loadMovies.fulfilled, (state, action) =>{

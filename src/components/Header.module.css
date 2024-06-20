@@ -1,0 +1,72 @@
+.HeaderDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.H3Div {
+    margin-bottom: 10px;
+}
+
+.H3Header {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.ButtonsDiv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ButtonHome {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: auto; /* Вирівнює кнопку Home ліворуч */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonHome:hover {
+    background-color: #555;
+}
+
+.ButtonGroup {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками Movies і TV-Series */
+    margin: 0 auto; /* Центрує групу кнопок */
+}
+
+.ButtonMovie,
+.ButtonSeries {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonMovie:hover,
+.ButtonSeries:hover {
+    background-color: #555;
+}
+
+.NavLink {
+    text-decoration: none;
+    color: inherit;
+}

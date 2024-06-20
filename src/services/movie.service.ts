@@ -4,7 +4,7 @@ import {urls} from "../urls/urls";
 import {AxiosError} from "axios";
 
 export const MovieService = {
-    getAllMovies : async (page:string):Promise<IMovieDiscoverPaginationModel | null> => {
+    getAllMovies : async (page:number):Promise<IMovieDiscoverPaginationModel | null> => {
         try {
             const response= await axiosInstance.get<IMovieDiscoverPaginationModel>(urls.getMovies)
             return response.data

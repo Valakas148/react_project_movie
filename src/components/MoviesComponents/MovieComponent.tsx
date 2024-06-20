@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
 import styles from './Movie.module.css'
+import {NavLink} from "react-router-dom";
 
 interface IProps {
     movie: IMovieDiscoverModel
@@ -13,10 +14,10 @@ const MovieComponent:FC<IProps> = ({movie}) => {
 
     return (
         <div className={styles.BlockMovies}>
-                <a className={styles.BlockMovie}>
+                    <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>
                     <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
                     <h4>{movie.title}</h4>
-                </a>
+                    </NavLink>
         </div>
     );
 };
