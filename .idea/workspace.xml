@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/react_project_movie.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/MoviesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/MoviesComponent.tsx" afterDir="false" />
+    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="10%">
+      <change afterPath="$PROJECT_DIR$/src/components/SearchMoviesComponents/SearchMoviesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/router.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/router.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/movie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/urls/urls.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/urls/urls.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +28,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Valakas148"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Valakas148&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Valakas148/react_project_movie.git",
-    "accountId": "c42389aa-d1fe-4bfc-95a8-ecf21149a874"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Valakas148/react_project_movie.git&quot;,
+    &quot;accountId&quot;: &quot;c42389aa-d1fe-4bfc-95a8-ecf21149a874&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2i8g9sLGcr2wu79FcEBo1ehZhgW" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -62,22 +52,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Mac\\IdeaProjects\\react_project_movie\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Mac\\IdeaProjects\\react_project_movie\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -94,11 +84,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718877470921</updated>
-      <workItem from="1718877472618" duration="9884000" />
+      <workItem from="1718877472618" duration="10801000" />
+      <workItem from="1718903798232" duration="2217000" />
     </task>
+    <task id="LOCAL-00001" summary="10%">
+      <option name="closed" value="true" />
+      <created>1718889563521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718889563522</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="10%" />
+    <option name="LAST_COMMIT_MESSAGE" value="10%" />
   </component>
 </project>

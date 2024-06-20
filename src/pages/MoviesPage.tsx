@@ -17,6 +17,8 @@ const MoviesPage = () => {
 
     const handleChange = (page:number)=> {
         dispatch(movieAction.SetCurrentPage(page))
+        console.log('page')
+        console.log(page)
     }
 
     return (
@@ -29,7 +31,13 @@ const MoviesPage = () => {
                 size="large"
             />
             <MoviesComponent/>
-            <PaginationComponent/>
+            <Pagination
+                count={total_pages ? (total_pages > 500 ? 500 : total_pages):100}
+                page={currentPage}
+                onChange={(_,page)=> handleChange(page)}
+                color="primary"
+                size="large"
+            />
         </div>
     );
 };

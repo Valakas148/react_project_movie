@@ -6,13 +6,15 @@ import {AxiosError} from "axios";
 type MovieSliceType ={
     movies: IMovieDiscoverModel[];
     currentPage: number;
-    total_pages: number | null
+    total_pages: number | null;
+    searchMovie: string;
 }
 
 const movieInitialState: MovieSliceType = {
     movies: [],
     currentPage: 1,
-    total_pages: null
+    total_pages: null,
+    searchMovie: ''
 }
 
 const loadMovies = createAsyncThunk(
@@ -28,12 +30,28 @@ async(currentPage: number, thunkAPI) =>{
         }
     }
 )
+const loadSearchMovie = createAsyncThunk(
+    'MovieSlice/loadSearchMovie',
+    async({query,page}:{query:string,page:number},thunkAPI) =>{
+        try{
+            const searchMovies = await MovieService.getSearchMovie(query,page)
+            return thunkAPI.fulfillWithValue(searchMovies?.results || [])
+        }
+        catch (e){
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error)
+        }
+    }
+)
 export const movieSlice = createSlice({
     name: 'MovieSlice',
     initialState: movieInitialState,
     reducers: {
         SetCurrentPage: (state,action) =>{
             state.currentPage = action.payload
+        },
+        SetSearchQuery: (state, action) =>{
+            state.searchMovie = action.payload
         }
     },
     extraReducers: builder =>
@@ -43,9 +61,15 @@ export const movieSlice = createSlice({
                     state.movies = action.payload
                 }
             })
+            .addCase(loadSearchMovie.fulfilled, (state,action) => {
+                if(state){
+                    state.movies = action.payload
+                }
+            })
 })
 
 export const movieAction ={
     ...movieSlice.actions,
-    loadMovies
+    loadMovies,
+    loadSearchMovie
 }
