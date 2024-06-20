@@ -1,0 +1,12 @@
+.MoviesPageDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.PaginationTop {
+    margin: 20px 0;
+}
+
+.PaginationBottom {
+    margin-top: 20px;
+}

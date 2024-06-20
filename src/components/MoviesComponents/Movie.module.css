@@ -7,13 +7,13 @@
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 260px; /* Ширина трохи більше за фото */
+    width: 260px;
     height: 400px;
 }
 .BlockMovies{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Відстань між блоками */
+    gap: 20px;
     justify-content: space-around;
 }
 .MovieImg{

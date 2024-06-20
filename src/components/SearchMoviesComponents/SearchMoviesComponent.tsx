@@ -1,16 +1,30 @@
-import React from 'react';
+import React, {FC} from 'react';
 import {useForm} from "react-hook-form";
+import {useAppSelector} from "../../redux/store";
+import {IFormModelInput} from "../../models/IFormModelInput";
+import styles from './SearchComponent.module.css'
 
-const SearchMoviesComponent = () => {
+interface IProps{
+    onSubmit: (data:IFormModelInput) => void
+}
+const SearchMoviesComponent:FC<IProps> = ({onSubmit}) => {
 
 
 
-    const{register,handleSubmit,reset} = useForm()
+    const{register,handleSubmit,reset} = useForm<IFormModelInput>()
 
+
+    const foundMovie = (data: IFormModelInput) =>{
+        onSubmit(data);
+        reset();
+    }
 
     return (
-        <div>
-            <input type="text" />
+        <div className={styles.SearchComponent}>
+            <form onSubmit={handleSubmit(foundMovie)} className={styles.SearchForm}>
+                <input type="text" {...register('searchWord')} placeholder="Type name of movie..." className={styles.InputSearch}/>
+                <button type="submit" className={styles.ButtonSearch}>Search</button>
+            </form>
         </div>
     );
 };

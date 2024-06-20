@@ -1,6 +1,4 @@
 import React, {FC} from 'react';
-import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
-import {useAppSelector} from "../../redux/store";
 import {useLocation} from "react-router-dom";
 import styles from "../MoviesComponents/Movie.module.css";
 

@@ -2,6 +2,7 @@ import React, {FC} from 'react';
 import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
 import styles from './Movie.module.css'
 import {NavLink} from "react-router-dom";
+import StarRatingComponent from "../StarRating/StarRatingComponent";
 
 interface IProps {
     movie: IMovieDiscoverModel
@@ -17,6 +18,7 @@ const MovieComponent:FC<IProps> = ({movie}) => {
                     <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>
                     <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
                     <h4>{movie.title}</h4>
+                        <StarRatingComponent rating={movie.vote_average}/>
                     </NavLink>
         </div>
     );

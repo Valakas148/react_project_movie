@@ -6,6 +6,11 @@ import PaginationComponent from "../components/PaginationComponent/PaginationCom
 import {Pagination} from "@mui/material";
 import SearchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
 import searchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
+import {useForm} from "react-hook-form";
+import {IFormModelInput} from "../models/IFormModelInput";
+import {useNavigate} from "react-router-dom";
+import styles from './MoviesPage.module.css'
+
 
 const MoviesPage = () => {
 
@@ -19,7 +24,7 @@ const MoviesPage = () => {
         }else{
             dispatch(movieAction.loadMovies(currentPage))
         }
-    }, [currentPage]);
+    }, [currentPage,searchMovie]);
 
     const handleChange = (page:number)=> {
         dispatch(movieAction.SetCurrentPage(page))
@@ -27,21 +32,35 @@ const MoviesPage = () => {
         console.log(page)
     }
 
+    const navigate = useNavigate()
+
+    const foundMovie = (data: IFormModelInput) =>{
+        if(data){
+
+            dispatch(movieAction.SetSearchQuery(data.searchWord))
+            console.log('foundmovie')
+        }
+        else {navigate('/movie')}
+
+    }
+
     return (
-        <div>
-            <SearchMoviesComponent/>
+        <div className={styles.MoviesPageDiv}>
+            <SearchMoviesComponent onSubmit={foundMovie} />
             <Pagination
-                count={total_pages ? (total_pages > 500 ? 500 : total_pages):100}
+                className={styles.PaginationTop}
+                count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 100}
                 page={currentPage}
-                onChange={(_,page)=> handleChange(page)}
+                onChange={(_, page) => handleChange(page)}
                 color="primary"
                 size="large"
             />
             <MoviesComponent/>
             <Pagination
-                count={total_pages ? (total_pages > 500 ? 500 : total_pages):100}
+                className={styles.PaginationBottom}
+                count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 100}
                 page={currentPage}
-                onChange={(_,page)=> handleChange(page)}
+                onChange={(_, page) => handleChange(page)}
                 color="primary"
                 size="large"
             />
