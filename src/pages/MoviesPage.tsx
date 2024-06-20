@@ -4,15 +4,21 @@ import {movieAction} from "../redux/slices/MovieSlice";
 import MoviesComponent from "../components/MoviesComponents/MoviesComponent";
 import PaginationComponent from "../components/PaginationComponent/PaginationComponent";
 import {Pagination} from "@mui/material";
+import SearchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
+import searchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
 
 const MoviesPage = () => {
 
     let dispatch=useAppDispatch()
 
-    let {currentPage, total_pages} = useAppSelector(state => state.movieSlice)
+    let {currentPage, total_pages,searchMovie} = useAppSelector(state => state.movieSlice)
 
     useEffect(() => {
-        dispatch(movieAction.loadMovies(currentPage))
+        if(searchMovie){
+            dispatch(movieAction.loadSearchMovie({query:searchMovie,page:currentPage}))
+        }else{
+            dispatch(movieAction.loadMovies(currentPage))
+        }
     }, [currentPage]);
 
     const handleChange = (page:number)=> {
@@ -23,6 +29,7 @@ const MoviesPage = () => {
 
     return (
         <div>
+            <SearchMoviesComponent/>
             <Pagination
                 count={total_pages ? (total_pages > 500 ? 500 : total_pages):100}
                 page={currentPage}
