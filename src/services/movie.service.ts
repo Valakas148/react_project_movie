@@ -44,5 +44,20 @@ export const MovieService = {
             console.log(axiosError)
             return null
         }
+    },
+    getMoviesByGenres: async (genreIds: number[], page: number):Promise<IMovieDiscoverPaginationModel | null> => {
+        try {
+            const response = await axiosInstance.get<IMovieDiscoverPaginationModel>(urls.getMovies,{
+                params:{
+                    with_genres: genreIds,
+                    page
+                }
+            })
+            return response.data
+        }catch (e) {
+            const axiosError = e as AxiosError
+            console.log(axiosError)
+            return null
+        }
     }
 }

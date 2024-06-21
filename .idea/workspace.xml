@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="15%">
+    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="test with genre &#10;now only load genre &#10;todo search genre by checkbox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/movie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie.service.ts" afterDir="false" />
@@ -110,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718906136927</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test with genre &#10;now only load genre &#10;todo search genre by checkbox">
+      <option name="closed" value="true" />
+      <created>1718989551389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718989551389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +125,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="10%" />
     <MESSAGE value="15%" />
-    <option name="LAST_COMMIT_MESSAGE" value="15%" />
+    <MESSAGE value="test with genre &#10;now only load genre &#10;todo search genre by checkbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="test with genre &#10;now only load genre &#10;todo search genre by checkbox" />
   </component>
 </project>

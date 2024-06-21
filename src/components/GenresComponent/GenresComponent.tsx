@@ -7,7 +7,6 @@ import {movieAction} from "../../redux/slices/MovieSlice";
 const GenresComponent = () => {
 
     const {genres} = useAppSelector(state => state.movieSlice)
-
     return (
         <div className={styles.GenresDiv}>
             {

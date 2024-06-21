@@ -10,7 +10,6 @@ import {useForm} from "react-hook-form";
 import {IFormModelInput} from "../models/IFormModelInput";
 import {useNavigate} from "react-router-dom";
 import styles from './MoviesPage.module.css'
-import GenresComponent from "../components/GenresComponent/GenresComponent";
 
 
 const MoviesPage = () => {
@@ -23,6 +22,9 @@ const MoviesPage = () => {
         if(searchMovie){
             dispatch(movieAction.loadSearchMovie({query:searchMovie,page:currentPage}))
             console.log("SEARCH")
+        }else if (selectedGenresID.length > 0) {
+            dispatch(movieAction.loadMoviesByGenres({ genreIds: selectedGenresID, page: currentPage }));
+            console.log('selected')
         }
         else{
             dispatch(movieAction.loadMovies(currentPage))
@@ -53,7 +55,7 @@ const MoviesPage = () => {
             <SearchMoviesComponent onSubmit={foundMovie}/>
             <Pagination
                 className={styles.PaginationTop}
-                count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 100}
+                count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 500}
                 page={currentPage}
                 onChange={(_, page) => handleChange(page)}
                 color="primary"

@@ -60,6 +60,18 @@ const loadGenres = createAsyncThunk(
         }
     }
 )
+const loadMoviesByGenres = createAsyncThunk(
+    'MovieSlice/loadMoviesByGenres',
+    async ({genreIds, page}:{genreIds:number[],page:number}, thunkAPI) =>{
+        try {
+            const response = await MovieService.getMoviesByGenres(genreIds,page)
+            return thunkAPI.fulfillWithValue(response?.results || [])
+        }catch (e) {
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error?.response?.data)
+        }
+    }
+)
 export const movieSlice = createSlice({
     name: 'MovieSlice',
     initialState: movieInitialState,
@@ -70,6 +82,9 @@ export const movieSlice = createSlice({
         SetSearchQuery: (state, action) =>{
             state.searchMovie = action.payload
         },
+        SetSelectedGenresID: (state,action) =>{
+            state.selectedGenresID = action.payload
+        }
     },
     extraReducers: builder =>
         builder
@@ -87,11 +102,15 @@ export const movieSlice = createSlice({
                 state.genres = action.payload || []
                 console.log(state.genres)
             })
+            .addCase(loadMoviesByGenres.fulfilled, (state, action)=>{
+                state.movies = action.payload
+            })
 })
 
 export const movieAction ={
     ...movieSlice.actions,
     loadMovies,
     loadSearchMovie,
-    loadGenres
+    loadGenres,
+    loadMoviesByGenres
 }
