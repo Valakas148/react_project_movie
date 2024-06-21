@@ -49,7 +49,7 @@ export const MovieService = {
         try {
             const response = await axiosInstance.get<IMovieDiscoverPaginationModel>(urls.getMovies,{
                 params:{
-                    with_genres: genreIds,
+                    with_genres: genreIds.join(','),
                     page
                 }
             })

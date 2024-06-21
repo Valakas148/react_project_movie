@@ -16,7 +16,9 @@ const MoviesPage = () => {
 
     let dispatch=useAppDispatch()
 
-    let {currentPage, total_pages,searchMovie,selectedGenresID, movies} = useAppSelector(state => state.movieSlice)
+    let {currentPage, total_pages,searchMovie,selectedGenresID} = useAppSelector(state => state.movieSlice)
+
+    console.log("MoviePage",selectedGenresID)
 
     useEffect(() => {
         if(searchMovie){
@@ -30,7 +32,7 @@ const MoviesPage = () => {
             dispatch(movieAction.loadMovies(currentPage))
             console.log("currentPage")
         }
-    }, [currentPage,searchMovie]);
+    }, [currentPage,searchMovie,selectedGenresID]);
 
     const handleChange = (page:number)=> {
         dispatch(movieAction.SetCurrentPage(page))
@@ -61,14 +63,6 @@ const MoviesPage = () => {
                 color="primary"
                 size="large"
             />
-
-{/*            <div className={styles.movies}>
-                {selectedGenresID.length > 0 ? movies.map(movie => (
-                    <MoviesComponent key={movie.id}/>
-                )) : movies.map(movie => (
-                    <MoviesComponent key={movie.id}/>
-                ))}
-            </div>*/}
             <MoviesComponent/>
             <Pagination
                 className={styles.PaginationBottom}

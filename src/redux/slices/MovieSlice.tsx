@@ -65,7 +65,19 @@ const loadMoviesByGenres = createAsyncThunk(
     async ({genreIds, page}:{genreIds:number[],page:number}, thunkAPI) =>{
         try {
             const response = await MovieService.getMoviesByGenres(genreIds,page)
-            return thunkAPI.fulfillWithValue(response?.results || [])
+            return thunkAPI.fulfillWithValue(response)
+        }catch (e) {
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error?.response?.data)
+        }
+    }
+)
+const loadMoviesByBadgeGenre = createAsyncThunk(
+    'MovieSlice/loadMoviesByBadgeGenre',
+    async ({genreId,page}:{genreId:number,page:number}, thunkAPI) =>{
+        try {
+            const response = await MovieService.getMoviesByGenres([genreId],page)
+            return thunkAPI.fulfillWithValue(response)
         }catch (e) {
             const error = e as AxiosError
             return thunkAPI.rejectWithValue(error?.response?.data)
@@ -84,6 +96,9 @@ export const movieSlice = createSlice({
         },
         SetSelectedGenresID: (state,action) =>{
             state.selectedGenresID = action.payload
+        },
+        SetSingleGenreID: (state,action) =>{
+            state.selectedGenresID = [action.payload]
         }
     },
     extraReducers: builder =>
@@ -103,7 +118,12 @@ export const movieSlice = createSlice({
                 console.log(state.genres)
             })
             .addCase(loadMoviesByGenres.fulfilled, (state, action)=>{
-                state.movies = action.payload
+                state.movies = action.payload?.results || []
+                state.total_pages = action.payload?.total_pages || null;
+            })
+            .addCase(loadMoviesByBadgeGenre.fulfilled, (state, action)=>{
+                state.movies = action.payload?.results || []
+                state.total_pages = action.payload?.total_pages || null
             })
 })
 
@@ -112,5 +132,6 @@ export const movieAction ={
     loadMovies,
     loadSearchMovie,
     loadGenres,
-    loadMoviesByGenres
+    loadMoviesByGenres,
+    loadMoviesByBadgeGenre
 }
