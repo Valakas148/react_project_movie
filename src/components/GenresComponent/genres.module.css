@@ -1,12 +1,14 @@
 .GenresDiv{
     display: flex;
     flex-direction: column;
-    max-height: 400px;
-    overflow-y: auto;
+    max-height: 800px;
+    /*overflow-y: auto;*/
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 8px;
     width: 200px;
+    background-color: lightgray;
+    opacity: 0.8;
 }
 .GenresDiv label{
     margin: 5px 0;

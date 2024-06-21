@@ -3,6 +3,8 @@ import {axiosInstance} from "./api.service";
 import {urls} from "../urls/urls";
 import {AxiosError} from "axios";
 import {IGenreCategoryModel} from "../models/IGenreCategoryModel";
+import {IGenreResponseModel} from "../models/IGenreResponseModel";
+import {IMovieDiscoverModel} from "../models/IMovieDiscoverModel";
 
 export const MovieService = {
     getAllMovies : async (page:number):Promise<IMovieDiscoverPaginationModel | null> => {
@@ -33,9 +35,9 @@ export const MovieService = {
             return null
         }
     },
-    getGenres: async ():Promise<IGenreCategoryModel[] | null> =>{
+    getGenres: async ():Promise<IGenreResponseModel | null> =>{
         try {
-            const response = await axiosInstance.get<IGenreCategoryModel[]>(urls.getGenres)
+            const response = await axiosInstance.get<IGenreResponseModel>(urls.getGenres)
             return response.data
         }
         catch (e) {
@@ -43,5 +45,16 @@ export const MovieService = {
             console.log(axiosError)
             return null
         }
+    },
+    getMoviesByGenres: async (genres: string,page:number):Promise<IMovieDiscoverPaginationModel | null>=>{
+        try {
+            const response = await axiosInstance.get<IMovieDiscoverPaginationModel>(`${urls.getMovies}?&page=${page}%with_genres=${genres}`)
+            return response.data
+        }catch (e) {
+            const axiosError = e as AxiosError
+            console.log(axiosError)
+            return null
+        }
+
     }
 }

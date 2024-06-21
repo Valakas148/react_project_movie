@@ -1,0 +1,14 @@
+.GenreItem {
+    margin-bottom: 10px; /* Відстань між елементами */
+}
+
+.GenreLabel {
+    font-size: 16px; /* Збільшення шрифту */
+    margin-left: 10px; /* Відстань між чекбоксом та текстом */
+    display: flex;
+    align-items: center;
+}
+
+.GenreCheckbox {
+    margin-right: 10px; /* Відстань між чекбоксом та текстом */
+}

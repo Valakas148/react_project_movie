@@ -10,6 +10,7 @@ type MovieSliceType ={
     total_pages: number | null;
     searchMovie: string;
     genres: IGenreCategoryModel[];
+    selectedGenresID: number[]
 }
 
 const movieInitialState: MovieSliceType = {
@@ -17,7 +18,8 @@ const movieInitialState: MovieSliceType = {
     currentPage: 1,
     total_pages: null,
     searchMovie: '',
-    genres: []
+    genres: [],
+    selectedGenresID: []
 }
 
 const loadMovies = createAsyncThunk(
@@ -50,11 +52,28 @@ const loadGenres = createAsyncThunk(
     'MovieSlice/loadGenres',
     async (_, thunkAPI) => {
         try {
-            const genres = await MovieService.getGenres()
-            return thunkAPI.fulfillWithValue(genres)
+            const response = await MovieService.getGenres()
+            if(response){
+                return thunkAPI.fulfillWithValue(response.genres)
+            }else {return thunkAPI.rejectWithValue('no genre')}
         }catch (e) {
             const error = e as AxiosError
-            return thunkAPI.rejectWithValue(error)
+            return thunkAPI.rejectWithValue(error?.response?.data)
+        }
+    }
+)
+const loadMoviesByGenres = createAsyncThunk(
+    'MovieSlice/loadMoviesByGenres',
+    async (_,thunkAPI) =>{
+        const state = thunkAPI.getState() as { movieSlice: MovieSliceType };
+        const genreString = state.movieSlice.selectedGenresID.join(',');
+        const currentPage = state.movieSlice.currentPage;
+        try {
+            const response = await MovieService.getMoviesByGenres(genreString, currentPage);
+            return thunkAPI.fulfillWithValue(response?.results);
+        } catch (e) {
+            const error = e as AxiosError;
+            return thunkAPI.rejectWithValue(error.response?.data);
         }
     }
 )
@@ -67,6 +86,9 @@ export const movieSlice = createSlice({
         },
         SetSearchQuery: (state, action) =>{
             state.searchMovie = action.payload
+        },
+        SetGenre: (state, action) =>{
+            state.selectedGenresID.push(action.payload)
         }
     },
     extraReducers: builder =>
@@ -82,7 +104,11 @@ export const movieSlice = createSlice({
                 }
             })
             .addCase(loadGenres.fulfilled, (state, action)=>{
-                    state.genres = action.payload
+                    state.genres = action.payload || []
+                console.log('loadGenres')
+            })
+            .addCase(loadMoviesByGenres.fulfilled, (state,action) =>{
+                state.movies = action.payload ?? []
             })
 })
 
@@ -90,5 +116,6 @@ export const movieAction ={
     ...movieSlice.actions,
     loadMovies,
     loadSearchMovie,
-    loadGenres
+    loadGenres,
+    loadMoviesByGenres
 }

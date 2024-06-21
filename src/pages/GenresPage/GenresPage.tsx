@@ -9,6 +9,7 @@ const GenresPage = () => {
 
     useEffect(() => {
         dispatch(movieAction.loadGenres())
+        console.log('useEffectGenresPage')
     }, []);
 
     return (

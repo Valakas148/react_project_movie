@@ -1,0 +1,6 @@
+.GenreLayout {
+    flex: 0 0 15%; /* Займає 25% ширини контейнера */
+    padding: 10px;
+    height: 750px;
+    margin-top: 50px;
+}
