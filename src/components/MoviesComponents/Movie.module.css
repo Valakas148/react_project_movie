@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-around;
+    position: relative; /* Added */
 }
 .MovieImg{
     width: 240px;
@@ -24,16 +25,15 @@
 }
 .GenreBadges {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    left: 10px; /* Changed to left */
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    padding: 5px;
 }
 
 .GenreBadge {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for readability */
     border-radius: 10px;
     padding: 2px 5px;
     font-size: 12px;
