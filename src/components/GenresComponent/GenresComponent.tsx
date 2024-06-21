@@ -11,9 +11,10 @@ const GenresComponent = () => {
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        dispatch(movieAction.loadMoviesByGenres())
         dispatch(movieAction.loadGenres)
-        console.log('123')
+        if (selectedGenresID.length > 0) {
+            dispatch(movieAction.loadMoviesByGenres());
+        }
     }, []);
 
     const handleChange = (genreId: number) => {
@@ -24,10 +25,18 @@ const GenresComponent = () => {
             } else {
                 return [...prevState, genreId];
             }
-        });*/
+        });
         dispatch(movieAction.SetGenre(genreId))
-        dispatch(movieAction.SetCurrentPage(1))
+        dispatch(movieAction.SetCurrentPage(1))*/
+        setSelectedGenres(prevState => {
+            const newSelectedGenres = prevState.includes(genreId)
+                ? prevState.filter(id => id !== genreId)
+                : [...prevState, genreId];
 
+            dispatch(movieAction.SetGenre(newSelectedGenres));
+            dispatch(movieAction.SetCurrentPage(1));
+            return newSelectedGenres;
+        });
     }
 
     console.log(selectedGenres)

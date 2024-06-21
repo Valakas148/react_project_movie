@@ -17,13 +17,13 @@ const MoviesPage = () => {
 
     let dispatch=useAppDispatch()
 
-    let {currentPage, total_pages,searchMovie,selectedGenresID} = useAppSelector(state => state.movieSlice)
+    let {currentPage, total_pages,searchMovie,selectedGenresID, movies} = useAppSelector(state => state.movieSlice)
 
     useEffect(() => {
         if(searchMovie){
             dispatch(movieAction.loadSearchMovie({query:searchMovie,page:currentPage}))
             console.log("SEARCH")
-        }else if(selectedGenresID.length > 0 && (searchMovie.length === 0)){
+        }else if(selectedGenresID.length > 0){
             dispatch(movieAction.loadMoviesByGenres())
             console.log("selectedGenresID")
         }
@@ -53,7 +53,7 @@ const MoviesPage = () => {
 
     return (
         <div className={styles.MoviesPageDiv}>
-            <SearchMoviesComponent onSubmit={foundMovie} />
+            <SearchMoviesComponent onSubmit={foundMovie}/>
             <Pagination
                 className={styles.PaginationTop}
                 count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 100}
@@ -62,6 +62,14 @@ const MoviesPage = () => {
                 color="primary"
                 size="large"
             />
+
+{/*            <div className={styles.movies}>
+                {selectedGenresID.length > 0 ? movies.map(movie => (
+                    <MoviesComponent key={movie.id}/>
+                )) : movies.map(movie => (
+                    <MoviesComponent key={movie.id}/>
+                ))}
+            </div>*/}
             <MoviesComponent/>
             <Pagination
                 className={styles.PaginationBottom}
