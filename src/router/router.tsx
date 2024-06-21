@@ -10,7 +10,8 @@ let routes: RouteObject[];
 routes = [{
     path: '/', element: <MainLayout/>, children: [
         {index: true, element: <MoviesPage/>},
-        {path:'movieInfo/:id', element: <MovieInfo/>}]
+        {path:'movieInfo/:id', element: <MovieInfo/>},
+        ]
 }]
 
 export const router = createBrowserRouter(routes)

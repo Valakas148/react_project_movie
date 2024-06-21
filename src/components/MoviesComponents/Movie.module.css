@@ -26,16 +26,18 @@
 .GenreBadges {
     position: absolute;
     top: 10px;
-    left: 10px; /* Changed to left */
+    left: 30px; /* Changed to left */
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
 .GenreBadge {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background for readability */
+    background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 2px 5px;
     font-size: 12px;
     color: white;
+    text-decoration: none;
+    cursor: pointer;
 }

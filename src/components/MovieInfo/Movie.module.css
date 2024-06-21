@@ -1,0 +1,73 @@
+/* Movie.module.css */
+.MovieInfoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.MovieInfoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.MovieImg {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.MovieDetails {
+    text-align: center;
+}
+
+.TitleH4 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.OriginalLang,
+.Genres {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.Genres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.GenreBadge {
+    display: inline-block;
+    background-color: #d0e8ff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.Overview {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.MovieBackgroundImg {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

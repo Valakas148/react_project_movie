@@ -1,9 +1,10 @@
 import React, {FC} from 'react';
 import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
 import styles from './Movie.module.css'
-import {NavLink} from "react-router-dom";
+import {Link, NavLink, useNavigate} from "react-router-dom";
 import StarRatingComponent from "../StarRating/StarRatingComponent";
-import {useAppSelector} from "../../redux/store";
+import {useAppDispatch, useAppSelector} from "../../redux/store";
+import {movieAction} from "../../redux/slices/MovieSlice";
 
 interface IProps {
     movie: IMovieDiscoverModel
@@ -18,13 +19,25 @@ const MovieComponent:FC<IProps> = ({movie}) => {
     const image_movie = `https://image.tmdb.org/t/p/w300${movie.poster_path}`
 
 
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+    const handleGenre = (genreId: number) => {
+        dispatch(movieAction.SetGenre([genreId]));
+        navigate('/');
+    };
+
     return (
         <div className={styles.BlockMovies}>
             <div className={styles.GenreBadges}>
-                {genreNames.map((name, index) => (
-                    <span key={index} className={styles.GenreBadge}>
-            {name}
-          </span>
+                {movie.genre_ids.map((id, index) => (
+                    <NavLink
+                        key={index}
+                        to="/"
+                        onClick={() => handleGenre(id)}
+                        className={styles.GenreBadge}
+                    >
+                        {genreNames[index]}
+                    </NavLink>
                 ))}
             </div>
             <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>

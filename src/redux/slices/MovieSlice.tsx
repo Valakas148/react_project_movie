@@ -121,5 +121,5 @@ export const movieAction ={
     loadMovies,
     loadSearchMovie,
     loadGenres,
-    loadMoviesByGenres
+    loadMoviesByGenres,
 }
