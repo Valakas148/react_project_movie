@@ -23,9 +23,6 @@ const MoviesPage = () => {
         if(searchMovie){
             dispatch(movieAction.loadSearchMovie({query:searchMovie,page:currentPage}))
             console.log("SEARCH")
-        }else if(selectedGenresID.length > 0){
-            dispatch(movieAction.loadMoviesByGenres())
-            console.log("selectedGenresID")
         }
         else{
             dispatch(movieAction.loadMovies(currentPage))

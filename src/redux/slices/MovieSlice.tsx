@@ -49,29 +49,14 @@ const loadSearchMovie = createAsyncThunk(
     }
 )
 const loadGenres = createAsyncThunk(
-    'MovieSlice/loadGenres',
-    async (_, thunkAPI) => {
+    'MovieSlice/loadGenred',
+    async (_, thunkAPI) =>{
         try {
             const response = await MovieService.getGenres()
-                return thunkAPI.fulfillWithValue(response?.genres || [])
+            return thunkAPI.fulfillWithValue(response?.genres)
         }catch (e) {
             const error = e as AxiosError
             return thunkAPI.rejectWithValue(error?.response?.data)
-        }
-    }
-)
-const loadMoviesByGenres = createAsyncThunk(
-    'MovieSlice/loadMoviesByGenres',
-    async (_,thunkAPI) =>{
-        const state = thunkAPI.getState() as { movieSlice: MovieSliceType };
-        const genreString = state.movieSlice.selectedGenresID.join(',');
-        const currentPage = state.movieSlice.currentPage;
-        try {
-            const response = await MovieService.getMoviesByGenres(genreString, currentPage);
-            return thunkAPI.fulfillWithValue(response?.results || []);
-        } catch (e) {
-            const error = e as AxiosError;
-            return thunkAPI.rejectWithValue(error.response?.data);
         }
     }
 )
@@ -85,14 +70,6 @@ export const movieSlice = createSlice({
         SetSearchQuery: (state, action) =>{
             state.searchMovie = action.payload
         },
-        SetGenre: (state, action) =>{
-/*            if (state.selectedGenresID.includes(action.payload)) {
-                state.selectedGenresID = state.selectedGenresID.filter(id => id !== action.payload);
-            } else {
-                state.selectedGenresID.push(action.payload);
-            }*/
-            state.selectedGenresID = action.payload;
-        }
     },
     extraReducers: builder =>
         builder
@@ -106,13 +83,9 @@ export const movieSlice = createSlice({
                     state.movies = action.payload
                 }
             })
-            .addCase(loadGenres.fulfilled, (state, action)=>{
-                    state.genres = action.payload || []
-                console.log('loadGenres')
-            })
-            .addCase(loadMoviesByGenres.fulfilled, (state,action) =>{
-                /*state.movies = action.payload || []*/
-                state.movies = action.payload ?? [];
+            .addCase(loadGenres.fulfilled, (state,action) =>{
+                state.genres = action.payload || []
+                console.log(state.genres)
             })
 })
 
@@ -120,6 +93,5 @@ export const movieAction ={
     ...movieSlice.actions,
     loadMovies,
     loadSearchMovie,
-    loadGenres,
-    loadMoviesByGenres,
+    loadGenres
 }

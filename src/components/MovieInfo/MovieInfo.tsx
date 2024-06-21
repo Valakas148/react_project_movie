@@ -22,10 +22,10 @@ const MovieInfo = () => {
     const navigate = useNavigate();
 
     const dispatch = useAppDispatch();
-    const handleGenre = (genreId: number) => {
+/*    const handleGenre = (genreId: number) => {
         dispatch(movieAction.SetGenre([genreId]));
         navigate('/');
-    };
+    };*/
     return (
         <div className={style1.MovieInfoContainer}>
             <div className={style1.MovieInfoBlock}>
@@ -38,7 +38,7 @@ const MovieInfo = () => {
                             <NavLink
                                 key={index}
                                 to="/"
-                                onClick={() => handleGenre(id)}
+                                /*onClick={() => handleGenre(id)}*/
                                 className={styles.GenreBadge}
                             >
                                 {genreNames[index]}

@@ -35,26 +35,14 @@ export const MovieService = {
             return null
         }
     },
-    getGenres: async ():Promise<IGenreResponseModel | null> =>{
+    getGenres: async ():Promise<IGenreResponseModel | null> => {
         try {
             const response = await axiosInstance.get<IGenreResponseModel>(urls.getGenres)
-            return response.data
-        }
-        catch (e) {
-            const axiosError = e as AxiosError
-            console.log(axiosError)
-            return null
-        }
-    },
-    getMoviesByGenres: async (genres: string,page:number):Promise<IMovieDiscoverPaginationModel | null>=>{
-        try {
-            const response = await axiosInstance.get<IMovieDiscoverPaginationModel>(`${urls.getMovies}?&page=${page}%with_genres=${genres}`)
             return response.data
         }catch (e) {
             const axiosError = e as AxiosError
             console.log(axiosError)
             return null
         }
-
     }
 }

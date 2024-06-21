@@ -21,10 +21,10 @@ const MovieComponent:FC<IProps> = ({movie}) => {
 
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-    const handleGenre = (genreId: number) => {
+/*    const handleGenre = (genreId: number) => {
         dispatch(movieAction.SetGenre([genreId]));
         navigate('/');
-    };
+    };*/
 
     return (
         <div className={styles.BlockMovies}>
@@ -33,7 +33,7 @@ const MovieComponent:FC<IProps> = ({movie}) => {
                     <NavLink
                         key={index}
                         to="/"
-                        onClick={() => handleGenre(id)}
+                        /*onClick={() => handleGenre(id)}*/
                         className={styles.GenreBadge}
                     >
                         {genreNames[index]}
