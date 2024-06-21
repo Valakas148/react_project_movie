@@ -17,12 +17,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 260px;
     height: 500px;
-    text-decoration: none; /* Забираємо підкреслення */
-    transition: background-color 0.3s ease; /* Плавний перехід для фону */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .BlockMovie:hover {
-    background-color: rgba(52,49,22,0.81); /* Темніший сірий колір при наведенні */
+    background-color: rgba(52,49,22,0.81);
 }
 
 .MovieImg {
@@ -43,7 +43,7 @@
 
 .GenreBadges {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -51,11 +51,16 @@
 }
 
 .GenreBadge {
-    background-color: rgba(255, 165, 0, 0.8); /* Інший колір фону з прозорістю */
+    background-color: rgba(255, 165, 0, 0.8);
     border-radius: 10px;
     padding: 2px 5px;
     font-size: 12px;
-    color: black; /* Чорний колір шрифту */
+    color: black;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.GenreBadge:hover{
+    background-color: rgba(105,64,131,0.63);
+    color: whitesmoke;
 }
