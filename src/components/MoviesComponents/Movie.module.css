@@ -22,3 +22,20 @@
     object-fit: cover;
     border-radius: 4px;
 }
+.GenreBadges {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+}
+
+.GenreBadge {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: white;
+}

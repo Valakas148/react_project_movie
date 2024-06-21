@@ -15,11 +15,18 @@ const MovieComponent:FC<IProps> = ({movie}) => {
 
     return (
         <div className={styles.BlockMovies}>
-                    <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>
-                    <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
-                    <h4>{movie.title}</h4>
-                        <StarRatingComponent rating={movie.vote_average}/>
-                    </NavLink>
+            <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>
+                <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
+                <h4>{movie.title}</h4>
+                <div className={styles.GenreBadges}>
+                    {movie.genre_ids.map((genreId, index) => (
+                        <span key={index} className={styles.GenreBadge}>
+                            {genreId}
+                        </span>
+                    ))}
+                </div>
+                <StarRatingComponent rating={movie.vote_average}/>
+            </NavLink>
         </div>
     );
 };

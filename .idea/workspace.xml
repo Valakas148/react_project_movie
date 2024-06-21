@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="30%">
+    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="&#10;33%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,7 @@
       <updated>1718877470921</updated>
       <workItem from="1718877472618" duration="10801000" />
       <workItem from="1718903798232" duration="3207000" />
-      <workItem from="1718949020490" duration="9926000" />
+      <workItem from="1718949020490" duration="10546000" />
     </task>
     <task id="LOCAL-00001" summary="10%">
       <option name="closed" value="true" />
@@ -144,7 +143,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718957133895</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="&#10;33%">
+      <option name="closed" value="true" />
+      <created>1718959198476</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718959198476</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,6 +161,7 @@
     <MESSAGE value="10%" />
     <MESSAGE value="15%" />
     <MESSAGE value="30%" />
-    <option name="LAST_COMMIT_MESSAGE" value="30%" />
+    <MESSAGE value="&#10;33%" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;33%" />
   </component>
 </project>
