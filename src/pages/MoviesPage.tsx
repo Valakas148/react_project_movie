@@ -10,19 +10,26 @@ import {useForm} from "react-hook-form";
 import {IFormModelInput} from "../models/IFormModelInput";
 import {useNavigate} from "react-router-dom";
 import styles from './MoviesPage.module.css'
+import GenresComponent from "../components/GenresComponent/GenresComponent";
 
 
 const MoviesPage = () => {
 
     let dispatch=useAppDispatch()
 
-    let {currentPage, total_pages,searchMovie} = useAppSelector(state => state.movieSlice)
+    let {currentPage, total_pages,searchMovie,selectedGenresID} = useAppSelector(state => state.movieSlice)
 
     useEffect(() => {
         if(searchMovie){
             dispatch(movieAction.loadSearchMovie({query:searchMovie,page:currentPage}))
-        }else{
+            console.log("SEARCH")
+        }else if(selectedGenresID.length > 0 && (searchMovie.length === 0)){
+            dispatch(movieAction.loadMoviesByGenres())
+            console.log("selectedGenresID")
+        }
+        else{
             dispatch(movieAction.loadMovies(currentPage))
+            console.log("currentPage")
         }
     }, [currentPage,searchMovie]);
 

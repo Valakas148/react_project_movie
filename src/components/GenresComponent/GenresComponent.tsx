@@ -6,28 +6,31 @@ import {movieAction} from "../../redux/slices/MovieSlice";
 
 const GenresComponent = () => {
 
-    const {genres} = useAppSelector(state => state.movieSlice)
+    const {genres, selectedGenresID} = useAppSelector(state => state.movieSlice)
     const [selectedGenres, setSelectedGenres] = useState<number[]>([]);
     const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(movieAction.loadMoviesByGenres())
+        dispatch(movieAction.loadGenres)
+        console.log('123')
+    }, []);
+
     const handleChange = (genreId: number) => {
-        setSelectedGenres(prevState => {
+/*        setSelectedGenres(prevState => {
             if (prevState.includes(genreId)) {
                 console.log('setSelectedGenres')
                 return prevState.filter(id => id !== genreId);
             } else {
                 return [...prevState, genreId];
             }
-        });
+        });*/
         dispatch(movieAction.SetGenre(genreId))
         dispatch(movieAction.SetCurrentPage(1))
+
     }
 
     console.log(selectedGenres)
-
-    useEffect(() => {
-        dispatch(movieAction.loadMoviesByGenres())
-        console.log('123')
-    }, [selectedGenres]);
 
     return (
         <div className={styles.GenresDiv}>
