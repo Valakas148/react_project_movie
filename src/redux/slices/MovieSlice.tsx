@@ -2,19 +2,22 @@ import {IMovieDiscoverModel} from "../../models/IMovieDiscoverModel";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {MovieService} from "../../services/movie.service";
 import {AxiosError} from "axios";
+import {IGenreCategoryModel} from "../../models/IGenreCategoryModel";
 
 type MovieSliceType ={
     movies: IMovieDiscoverModel[];
     currentPage: number;
     total_pages: number | null;
     searchMovie: string;
+    genres: IGenreCategoryModel[];
 }
 
 const movieInitialState: MovieSliceType = {
     movies: [],
     currentPage: 1,
     total_pages: null,
-    searchMovie: ''
+    searchMovie: '',
+    genres: []
 }
 
 const loadMovies = createAsyncThunk(
@@ -43,6 +46,18 @@ const loadSearchMovie = createAsyncThunk(
         }
     }
 )
+const loadGenres = createAsyncThunk(
+    'MovieSlice/loadGenres',
+    async (_, thunkAPI) => {
+        try {
+            const genres = await MovieService.getGenres()
+            return thunkAPI.fulfillWithValue(genres)
+        }catch (e) {
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error)
+        }
+    }
+)
 export const movieSlice = createSlice({
     name: 'MovieSlice',
     initialState: movieInitialState,
@@ -66,10 +81,14 @@ export const movieSlice = createSlice({
                     state.movies = action.payload
                 }
             })
+            .addCase(loadGenres.fulfilled, (state, action)=>{
+                    state.genres = action.payload
+            })
 })
 
 export const movieAction ={
     ...movieSlice.actions,
     loadMovies,
-    loadSearchMovie
+    loadSearchMovie,
+    loadGenres
 }
