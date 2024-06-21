@@ -15,7 +15,7 @@ const SearchPage = () => {
     const handleSearchSubmit = (data: IFormModelInput) => {
         dispatch(movieAction.SetSearchQuery(data.searchWord));
         dispatch(movieAction.SetCurrentPage(1));
-        navigate('/'); // Перенаправлення на сторінку фільмів після пошуку
+        navigate('/');
     };
 
 
