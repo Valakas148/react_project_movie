@@ -1,14 +1,25 @@
-.GenreItem {
-    margin-bottom: 10px; /* Відстань між елементами */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.genresDiv {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
 }
 
-.GenreLabel {
-    font-size: 16px; /* Збільшення шрифту */
-    margin-left: 10px; /* Відстань між чекбоксом та текстом */
+.genreItem {
     display: flex;
     align-items: center;
+    padding: 5px 0;
 }
 
-.GenreCheckbox {
-    margin-right: 10px; /* Відстань між чекбоксом та текстом */
+.genreLabel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #202020;
+    cursor: pointer;
+}
+
+.genreCheckbox {
+    margin-right: 10px;
 }

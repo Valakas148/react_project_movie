@@ -28,7 +28,7 @@ const MovieComponent:FC<IProps> = ({movie}) => {
     };
 
     return (
-        <div className={styles.BlockMovies}>
+        <div key={movie.id} className={styles.BlockMovies}>
             <div className={styles.GenreBadges}>
                 {movie.genre_ids.map((id, index) => (
                     <NavLink
@@ -43,7 +43,7 @@ const MovieComponent:FC<IProps> = ({movie}) => {
             </div>
             <NavLink to={`movieInfo/${movie.id}`} state={{movie}} className={styles.BlockMovie}>
                 <img alt={movie.title} src={image_movie} className={styles.MovieImg}/>
-                <h4>{movie.title}</h4>
+                <h4 className={styles.MovieTitle}>{movie.title} ({new Date(movie.release_date).getFullYear()})</h4>
                 <StarRatingComponent rating={movie.vote_average}/>
             </NavLink>
         </div>

@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="60%">
+      <change afterPath="$PROJECT_DIR$/src/pages/SearchPage/SearchPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/MovieComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/Movies.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/Movies.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -84,7 +95,7 @@
       <updated>1718877470921</updated>
       <workItem from="1718877472618" duration="10801000" />
       <workItem from="1718903798232" duration="3207000" />
-      <workItem from="1718999731204" duration="3898000" />
+      <workItem from="1718999731204" duration="9965000" />
     </task>
     <task id="LOCAL-00001" summary="10%">
       <option name="closed" value="true" />
@@ -126,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719002460823</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="60%">
+      <option name="closed" value="true" />
+      <created>1719003838005</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719003838005</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

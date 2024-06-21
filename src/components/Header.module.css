@@ -1,72 +1,66 @@
 .HeaderDiv {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .H3Div {
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
 }
 
 .H3Header {
+    font-size: 24px;
     margin: 0;
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 .ButtonsDiv {
-    display: flex;
-    align-items: center;
-    width: 100%;
+    flex: 1;
 }
 
 .ButtonHome {
-    background-color: #444;
-    color: #fff;
+    background: none;
     border: none;
-    padding: 10px 20px;
+    color: #fff;
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    margin-right: auto; /* Вирівнює кнопку Home ліворуч */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .ButtonHome:hover {
-    background-color: #555;
-}
-
-.ButtonGroup {
-    display: flex;
-    gap: 10px; /* Відстань між кнопками Movies і TV-Series */
-    margin: 0 auto; /* Центрує групу кнопок */
-}
-
-.ButtonMovie,
-.ButtonSeries {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.ButtonMovie:hover,
-.ButtonSeries:hover {
-    background-color: #555;
+    text-decoration: underline;
 }
 
 .NavLink {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.RightSection {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.SearchDiv {
+    margin-right: 20px;
+}
+
+.UserIcon {
+    background-color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

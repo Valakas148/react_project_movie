@@ -27,16 +27,17 @@ const GenreComponent:FC<IProps>= ({genre}) => {
     };
 
     return (
-        <div className={styles.GenreItem}>
-            <label className={styles.GenreLabel}>
+        <div className={styles.genreItem}>
+            <label className={styles.genreLabel}>
                 <input
                     type="checkbox"
                     value={genre.id}
-                    className={styles.GenreCheckbox}
+                    className={styles.genreCheckbox}
                     checked={selectedGenresID.includes(genre.id)}
                     onChange={handleCheck}
                 />
                 {genre.name}
+                <hr/>
             </label>
         </div>
     );

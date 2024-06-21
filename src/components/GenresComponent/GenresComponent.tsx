@@ -8,10 +8,11 @@ const GenresComponent = () => {
 
     const {genres} = useAppSelector(state => state.movieSlice)
     return (
-        <div className={styles.GenresDiv}>
-            {
-                genres.map(genre => <GenreComponent key={genre.id} genre={genre}/>)
-            }
+        <div className={styles.genresDiv}>
+            <div className={styles.title}><p>Додати Жанр:</p></div>
+            {genres.map(genre => (
+                <GenreComponent key={genre.id} genre={genre}/>
+            ))}
         </div>
     );
 };

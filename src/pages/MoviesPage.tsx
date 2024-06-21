@@ -36,41 +36,60 @@ const MoviesPage = () => {
 
     const handleChange = (page:number)=> {
         dispatch(movieAction.SetCurrentPage(page))
-        console.log('page')
-        console.log(page)
-    }
-
-    const navigate = useNavigate()
-
-    const foundMovie = (data: IFormModelInput) =>{
-        if(data){
-
-            dispatch(movieAction.SetSearchQuery(data.searchWord))
-            console.log('foundmovie')
-        }
-        else {navigate('/movie')}
-
     }
 
     return (
         <div className={styles.MoviesPageDiv}>
-            <SearchMoviesComponent onSubmit={foundMovie}/>
             <Pagination
-                className={styles.PaginationTop}
+                className={styles.PaginationTop && styles.Pagination}
                 count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 500}
                 page={currentPage}
                 onChange={(_, page) => handleChange(page)}
                 color="primary"
                 size="large"
+                sx={{
+                    '& .MuiPagination-ul': {
+                        justifyContent: 'center',
+                        margin: '20px'
+                    },
+                    '& .MuiPaginationItem-root': {
+                        background: '#202020',
+                        color: '#f3f3f3',
+                        borderRadius: '6px',
+                        '&:hover': {
+                            background: 'lighten(#202020, 3%)',
+                        },
+                        '&.Mui-selected': {
+                            background: 'lighten(#202020, 3%)',
+                        },
+                    },
+                }}
             />
             <MoviesComponent/>
             <Pagination
-                className={styles.PaginationBottom}
+                className={styles.PaginationBottom && styles.Pagination}
                 count={total_pages ? (total_pages > 500 ? 500 : total_pages) : 100}
                 page={currentPage}
                 onChange={(_, page) => handleChange(page)}
                 color="primary"
                 size="large"
+                sx={{
+                    '& .MuiPagination-ul': {
+                        justifyContent: 'center',
+                        margin: '20px'
+                    },
+                    '& .MuiPaginationItem-root': {
+                        background: '#202020',
+                        color: '#f3f3f3',
+                        borderRadius: '6px',
+                        '&:hover': {
+                            background: 'lighten(#202020, 3%)',
+                        },
+                        '&.Mui-selected': {
+                            background: 'lighten(#202020, 3%)',
+                        },
+                    },
+                }}
             />
         </div>
     );
