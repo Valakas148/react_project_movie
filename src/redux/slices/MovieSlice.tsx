@@ -70,9 +70,12 @@ const loadMoviesByGenres = createAsyncThunk(
         const currentPage = state.movieSlice.currentPage;
         try {
             const response = await MovieService.getMoviesByGenres(genreString, currentPage);
+            console.log(response?.results)
+            console.log('11')
             return thunkAPI.fulfillWithValue(response?.results);
         } catch (e) {
             const error = e as AxiosError;
+            console.log('22')
             return thunkAPI.rejectWithValue(error.response?.data);
         }
     }

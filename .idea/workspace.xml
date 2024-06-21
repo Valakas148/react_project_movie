@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="15%">
-      <change afterPath="$PROJECT_DIR$/src/layouts/MainL.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/IGenreResponseModel.ts" afterDir="false" />
+    <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="30%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenreComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Genre/Genre.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Genre/Genre.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/MainLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/GenresPage/GenresPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/GenresPage/GenresPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/movie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +86,7 @@
       <updated>1718877470921</updated>
       <workItem from="1718877472618" duration="10801000" />
       <workItem from="1718903798232" duration="3207000" />
-      <workItem from="1718949020490" duration="4234000" />
+      <workItem from="1718949020490" duration="6109000" />
     </task>
     <task id="LOCAL-00001" summary="10%">
       <option name="closed" value="true" />
@@ -128,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718949052548</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="30%">
+      <option name="closed" value="true" />
+      <created>1718953323304</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718953323304</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +137,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="10%" />
     <MESSAGE value="15%" />
-    <option name="LAST_COMMIT_MESSAGE" value="15%" />
+    <MESSAGE value="30%" />
+    <option name="LAST_COMMIT_MESSAGE" value="30%" />
   </component>
 </project>
