@@ -53,14 +53,15 @@ const MoviesPage = () => {
                         margin: '20px'
                     },
                     '& .MuiPaginationItem-root': {
-                        background: '#202020',
+                        background: '#9400D3',
                         color: '#f3f3f3',
-                        borderRadius: '6px',
+                        borderRadius: '50%',
+                        padding: '8px',
                         '&:hover': {
-                            background: 'lighten(#202020, 3%)',
+                            background: '#FFB6C1',
                         },
                         '&.Mui-selected': {
-                            background: 'lighten(#202020, 3%)',
+                            background: '#DAA520',
                         },
                     },
                 }}
@@ -79,14 +80,15 @@ const MoviesPage = () => {
                         margin: '20px'
                     },
                     '& .MuiPaginationItem-root': {
-                        background: '#202020',
+                        background: '#9400D3',
                         color: '#f3f3f3',
-                        borderRadius: '6px',
+                        borderRadius: '50%',
+                        padding: '8px',
                         '&:hover': {
-                            background: 'lighten(#202020, 3%)',
+                            background: '#FFB6C1',
                         },
                         '&.Mui-selected': {
-                            background: 'lighten(#202020, 3%)',
+                            background: '#DAA520',
                         },
                     },
                 }}

@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import {useAppDispatch} from "../../redux/store";
 import {movieAction} from "../../redux/slices/MovieSlice";
 import GenresComponent from "../../components/GenresComponent/GenresComponent";
+import styles from './genreP.module.css'
 
 const GenresPage = () => {
 
@@ -13,7 +14,7 @@ const GenresPage = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.GenreMainDiv}>
             <GenresComponent/>
         </div>
     );

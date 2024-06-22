@@ -30,23 +30,30 @@ const MovieInfo = () => {
     return (
         <div className={style1.MovieInfoContainer}>
             <div className={style1.MovieInfoBlock}>
-                <img alt={movie.title} src={image_movie} className={style1.MovieImg}/>
                 <div className={style1.MovieDetails}>
-                    <h4 className={style1.TitleH4}>{movie.title}</h4>
-                    <p className={style1.OriginalLang}>Original Language: <b>{movie.original_language}</b></p>
-                    <div className={style1.Genres}>
-                        {movie.genre_ids.map((id:number, index:number) => (
-                            <NavLink
-                                key={index}
-                                to="/"
-                                onClick={() => handleGenre(id)}
-                                className={styles.GenreBadge}
-                            >
-                                {genreNames[index]}
-                            </NavLink>
-                        ))}
+                    <img alt={movie.title} src={image_movie} className={style1.MovieImg}/>
+                    <div className={style1.MovieDetails2}>
+                        <h4 className={style1.TitleH4}>{movie.title}</h4>
+                        <p className={style1.OriginalLang}>Original Language: <b>{movie.original_language.toUpperCase()}</b></p>
+                        <p className={style1.ReleaseDate}>Release Year: <b>{movie.release_date}</b></p>
+                        <p className={style1.Popularity}>Popularity: <b>{movie.popularity}</b></p>
+                            <div className={style1.Genres}>
+                                {movie.genre_ids.map((id: number, index: number) => (
+                                    <NavLink
+                                        key={index}
+                                        to="/"
+                                        onClick={() => handleGenre(id)}
+                                        className={styles.GenreBadge}
+                                    >
+                                        {genreNames[index]}
+                                    </NavLink>
+                                ))}
+                            </div>
+                            <StarRatingComponent rating={movie.vote_average}/>
+                            <button className={style1.ButtonPlay}>Play</button>
                     </div>
-                    <StarRatingComponent rating={movie.vote_average}/>
+                </div>
+                <div className={style1.SecondBlock}>
                     <p className={style1.Overview}><b>Overview:</b> <br/> {movie.overview}</p>
                     <img alt={movie.title} src={backdrop_movie} className={style1.MovieBackgroundImg}/>
                 </div>

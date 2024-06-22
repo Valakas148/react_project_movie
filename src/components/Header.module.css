@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
-    color: #fff;
     padding: 10px 20px;
+    background: linear-gradient(100deg, #6a0dad, #202020);
+    color: white;
 }
 
 .H3Div {
@@ -58,8 +58,8 @@
 .UserIcon {
     background-color: white;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;

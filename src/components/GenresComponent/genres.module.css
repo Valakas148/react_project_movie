@@ -7,8 +7,9 @@
     padding: 10px;
     border-radius: 8px;
     width: 200px;
-    background-color: rgba(211, 211, 211, 0.5);
+    background: linear-gradient(180deg, #DDA0DD, #F4A460);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 .genresDiv label{
     margin: 5px 0;

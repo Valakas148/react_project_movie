@@ -8,7 +8,7 @@
 }
 
 .BlockMovie {
-    background-color: lightgray;
+    background: linear-gradient(180deg, #9400D3, #DAA520);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,11 +18,11 @@
     width: 260px;
     height: 500px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background 0.6s ease-in-out;
 }
-
 .BlockMovie:hover {
-    background-color: rgba(52,49,22,0.81);
+    background: linear-gradient(100deg, #DAA520, #9400D3);
+    transition: background 1s ease-in-out;
 }
 
 .MovieImg {
