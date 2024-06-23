@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="todo switcher theme">
-      <change afterPath="$PROJECT_DIR$/src/components/ThemeSwitchComponent/ThemeSwitch.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThemeSwitchComponent/ThemeSwitchComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeSwitchComponent/ThemeSwitchComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/MovieSlice.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/movie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/movie.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

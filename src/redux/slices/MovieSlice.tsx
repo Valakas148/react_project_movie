@@ -16,7 +16,7 @@ type MovieSliceType ={
 const movieInitialState: MovieSliceType = {
     movies: [],
     currentPage: 1,
-    total_pages: null,
+    total_pages: 500,
     searchMovie: '',
     genres: [],
     selectedGenresID: []
@@ -27,7 +27,7 @@ const loadMovies = createAsyncThunk(
 async(currentPage: number, thunkAPI) =>{
         try{
             const movies = await MovieService.getAllMovies(currentPage)
-            return thunkAPI.fulfillWithValue(movies?.results || [])
+            return thunkAPI.fulfillWithValue(movies)
         }
         catch (e){
             const error =e as AxiosError
@@ -37,14 +37,13 @@ async(currentPage: number, thunkAPI) =>{
 )
 const loadSearchMovie = createAsyncThunk(
     'MovieSlice/loadSearchMovie',
-    async({query,page}:{query:string,page:number},thunkAPI) =>{
-        try{
-            const searchMovies = await MovieService.getSearchMovie(query,page)
-            return thunkAPI.fulfillWithValue(searchMovies?.results || [])
-        }
-        catch (e){
-            const error = e as AxiosError
-            return thunkAPI.rejectWithValue(error)
+    async ({ query, page }: { query: string, page: number }, thunkAPI) => {
+        try {
+            const searchMovies = await MovieService.getSearchMovie(query, page);
+            return thunkAPI.fulfillWithValue(searchMovies);
+        } catch (e) {
+            const error = e as AxiosError;
+            return thunkAPI.rejectWithValue(error);
         }
     }
 )
@@ -99,15 +98,20 @@ export const movieSlice = createSlice({
         },
         SetSingleGenreID: (state,action) =>{
             state.selectedGenresID = [action.payload]
+        },
+        ResetTotalPages: (state) => {
+            state.total_pages = 500;
         }
     },
     extraReducers: builder =>
         builder
             .addCase(loadMovies.fulfilled, (state, action) =>{
-                state.movies = action.payload
+                state.movies = action.payload?.results || [];
+                state.total_pages = action.payload?.total_pages || 500;
             })
             .addCase(loadSearchMovie.fulfilled, (state,action) => {
-                state.movies = action.payload
+                state.movies = action.payload?.results || [];
+                state.total_pages = action.payload?.total_pages || 500;
             })
             .addCase(loadGenres.fulfilled, (state,action) =>{
                 state.genres = action.payload || []
