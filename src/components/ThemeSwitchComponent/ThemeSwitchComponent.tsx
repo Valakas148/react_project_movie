@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from "../Header.module.css";
+import styles from './ThemeSwitch.module.css';
 
 const ThemeSwitchComponent = () => {
 
@@ -11,10 +11,18 @@ const ThemeSwitchComponent = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
     return (
-        <div>
-            <button onClick={toggleTheme} className={styles.ThemeSwitcher}>
-                {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </button>
+        <div className={styles.themeSwitchContainer}>
+            <input
+                type="checkbox"
+                id="themeSwitch"
+                name="theme-switch"
+                className={styles.themeSwitch__input}
+                checked={theme === 'dark'}
+                onChange={toggleTheme}
+            />
+            <label htmlFor="themeSwitch" className={styles.themeSwitch__label}>
+                <span></span>
+            </label>
         </div>
     );
 };

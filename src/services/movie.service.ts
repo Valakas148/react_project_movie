@@ -2,9 +2,7 @@ import {IMovieDiscoverPaginationModel} from "../models/IMovieDiscoverPaginationM
 import {axiosInstance} from "./api.service";
 import {urls} from "../urls/urls";
 import {AxiosError} from "axios";
-import {IGenreCategoryModel} from "../models/IGenreCategoryModel";
 import {IGenreResponseModel} from "../models/IGenreResponseModel";
-import {IMovieDiscoverModel} from "../models/IMovieDiscoverModel";
 
 export const MovieService = {
     getAllMovies : async (page:number):Promise<IMovieDiscoverPaginationModel | null> => {

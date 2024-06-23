@@ -104,14 +104,10 @@ export const movieSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(loadMovies.fulfilled, (state, action) =>{
-                if(state){
-                    state.movies = action.payload
-                }
+                state.movies = action.payload
             })
             .addCase(loadSearchMovie.fulfilled, (state,action) => {
-                if(state){
-                    state.movies = action.payload
-                }
+                state.movies = action.payload
             })
             .addCase(loadGenres.fulfilled, (state,action) =>{
                 state.genres = action.payload || []
