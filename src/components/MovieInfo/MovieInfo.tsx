@@ -33,8 +33,8 @@ const MovieInfo = () => {
                 <div className={style1.MovieDetails}>
                     <img alt={movie.title} src={image_movie} className={style1.MovieImg}/>
                     <div className={style1.MovieDetails2}>
-                        <h4 className={style1.TitleH4}>{movie.title}</h4>
-                        <p className={style1.OriginalLang}>Original Language: <b>{movie.original_language.toUpperCase()}</b></p>
+                        <h4 className={style1.TitleH4} >{movie.title}</h4>
+                            <p className={style1.OriginalLang}>Original Language: <b>{movie.original_language.toUpperCase()}</b></p>
                         <p className={style1.ReleaseDate}>Release Year: <b>{movie.release_date}</b></p>
                         <p className={style1.Popularity}>Popularity: <b>{movie.popularity}</b></p>
                             <div className={style1.Genres}>

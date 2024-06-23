@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7bcc76-221d-47c1-a0ab-4a5590cd5cb7" name="Changes" comment="todo switcher theme">
-      <change afterPath="$PROJECT_DIR$/src/components/ThemeSwitchComponent/ThemeSwitchComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/GenresComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HeaderComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genre.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenresComponent/genres.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/MovieInfo/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfo/Movie.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MoviesComponents/Movie.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PaginationComponent/PaginationComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchMoviesComponents/SearchMoviesComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchMoviesComponents/SearchMoviesComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieInfo/MovieInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MoviesPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +89,7 @@
       <workItem from="1718903798232" duration="3207000" />
       <workItem from="1718999731204" duration="11105000" />
       <workItem from="1719039926976" duration="4598000" />
-      <workItem from="1719149767980" duration="4539000" />
+      <workItem from="1719149767980" duration="7065000" />
     </task>
     <task id="LOCAL-00001" summary="10%">
       <option name="closed" value="true" />
@@ -176,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719044557953</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="todo switcher theme">
+      <option name="closed" value="true" />
+      <created>1719154386065</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719154386065</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
