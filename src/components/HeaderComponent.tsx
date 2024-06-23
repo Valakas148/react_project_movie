@@ -1,11 +1,10 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, NavLink, useNavigate} from "react-router-dom";
 import styles from './Header.module.css'
 import {useAppDispatch} from "../redux/store";
 import {movieAction} from "../redux/slices/MovieSlice";
-import {IFormModelInput} from "../models/IFormModelInput";
-import SearchMoviesComponent from "./SearchMoviesComponents/SearchMoviesComponent";
 import SearchPage from "../pages/SearchPage/SearchPage";
+import ThemeSwitchComponent from "./ThemeSwitchComponent/ThemeSwitchComponent";
 
 const HeaderComponent = () => {
 
@@ -18,7 +17,6 @@ const HeaderComponent = () => {
         dispatch(movieAction.SetSearchQuery(''));
         navigate('/');
     };
-
 
     return (
         <div className={styles.HeaderDiv}>
@@ -36,6 +34,7 @@ const HeaderComponent = () => {
                 <div className={styles.SearchDiv}>
                     <SearchPage/>
                 </div>
+                <ThemeSwitchComponent/>
                 <div className={styles.UserIcon}>
                     <img width="25" height="25" src="https://img.icons8.com/ios/50/user--v1.png" alt="user--v1"/>
                 </div>

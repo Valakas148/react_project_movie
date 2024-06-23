@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import {useForm} from "react-hook-form";
-import {useAppSelector} from "../../redux/store";
 import {IFormModelInput} from "../../models/IFormModelInput";
 import styles from './SearchComponent.module.css'
 

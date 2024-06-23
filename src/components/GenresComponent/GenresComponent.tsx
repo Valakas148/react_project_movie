@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {useAppDispatch, useAppSelector} from "../../redux/store";
 import GenreComponent from "./GenreComponent";
 import styles from './genres.module.css'
-import {movieAction} from "../../redux/slices/MovieSlice";
 
 const GenresComponent = () => {
 

@@ -2,13 +2,7 @@ import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from "../redux/store";
 import {movieAction} from "../redux/slices/MovieSlice";
 import MoviesComponent from "../components/MoviesComponents/MoviesComponent";
-import PaginationComponent from "../components/PaginationComponent/PaginationComponent";
 import {Pagination} from "@mui/material";
-import SearchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
-import searchMoviesComponent from "../components/SearchMoviesComponents/SearchMoviesComponent";
-import {useForm} from "react-hook-form";
-import {IFormModelInput} from "../models/IFormModelInput";
-import {useNavigate} from "react-router-dom";
 import styles from './MoviesPage.module.css'
 
 

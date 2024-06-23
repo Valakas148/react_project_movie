@@ -8,20 +8,20 @@
 }
 
 .BlockMovie {
-    background: linear-gradient(180deg, #9400D3, #DAA520);
+    background: var(--blockmovie-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--blockmovie-box-shadow);
     width: 260px;
     height: 500px;
     text-decoration: none;
     transition: background 0.6s ease-in-out;
 }
 .BlockMovie:hover {
-    background: linear-gradient(100deg, #DAA520, #9400D3);
+    background: var(--blockmovie-bg-hover);
     transition: background 1s ease-in-out;
 }
 
